@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  api:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.api
+    container_name: telemetry-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://telemetry:telemetry123@db:5432/telemetry_db
+      - ENVIRONMENT=production
+    volumes:
+      - ../api:/app/api
+      - ../database:/app/database
+    depends_on:
+      - db
+    restart: unless-stopped
+    networks:
+      - telemetry-network
+
+  db:
+    image: postgres:15-alpine
+    container_name: telemetry-db
+    environment:
+      - POSTGRES_USER=telemetry
+      - POSTGRES_PASSWORD=telemetry123
+      - POSTGRES_DB=telemetry_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    restart: unless-stopped
+    networks:
+      - telemetry-network
+
+  redis:
+    image: redis:7-alpine
+    container_name: telemetry-redis
+    ports:
+      - "6379:6379"
+    restart: unless-stopped
+    networks:
+      - telemetry-network
+
+volumes:
+  postgres_data:
+
+networks:
+  telemetry-network:
+    driver: bridge
