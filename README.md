@@ -1,4 +1,4 @@
-# 🚗 Vehicle Telemetry Data Platform
+#  Vehicle Telemetry Data Platform
 
 [![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-green.svg)](https://fastapi.tiangolo.com/)
@@ -7,19 +7,19 @@
 
 A high-performance platform for processing vehicle telemetry data and optimizing fleet routing using advanced graph algorithms and parallel computation.
 
-![System Architecture](docs/images/architecture-overview.png)
 
-## 🌟 Features
 
-- **🚗 Real-time Telemetry Processing**: Ingest and process vehicle data at scale (1000+ events/second)
-- **📊 Fleet Management**: Monitor and manage vehicle fleets with comprehensive tracking
-- **🗺️ Route Optimization**: Advanced graph algorithms for optimal route planning
-- **⚡ High Performance**: C++ computation engine with OpenMP parallelization
-- **🐳 Containerized**: Docker-ready for easy deployment
-- **🔄 CI/CD Ready**: Automated testing and deployment pipelines
-- **📚 Well Documented**: Comprehensive API documentation and guides
+##  Features
 
-## 🎯 Use Cases
+- ** Real-time Telemetry Processing**: Ingest and process vehicle data at scale (1000+ events/second)
+- ** Fleet Management**: Monitor and manage vehicle fleets with comprehensive tracking
+- ** Route Optimization**: Advanced graph algorithms for optimal route planning
+- ** High Performance**: C++ computation engine with OpenMP parallelization
+- ** Containerized**: Docker-ready for easy deployment
+- ** CI/CD Ready**: Automated testing and deployment pipelines
+- ** Well Documented**: Comprehensive API documentation and guides
+
+##  Use Cases
 
 - **Fleet Routing Optimization**: Minimize travel distance and time for delivery vehicles
 - **Traffic Flow Analysis**: Optimize vehicle distribution across road networks
@@ -27,7 +27,7 @@ A high-performance platform for processing vehicle telemetry data and optimizing
 - **Network Reliability**: Identify critical routes using min-cut analysis
 - **Real-time Monitoring**: Track vehicle locations, speed, and fuel levels
 
-## 🏗️ Architecture
+##  Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -57,7 +57,7 @@ A high-performance platform for processing vehicle telemetry data and optimizing
 └────────────────────────────────────────────┘
 ```
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### Prerequisites
 
@@ -121,7 +121,7 @@ python api/main.py
 | `POST` | `/api/v1/optimize/routes` | Trigger route optimization |
 | `GET` | `/api/v1/routes/{job_id}` | Get optimization results |
 
-## 💡 Example Usage
+##  Example Usage
 
 ### Register a Vehicle
 ```bash
@@ -163,7 +163,7 @@ curl -X POST "http://localhost:8000/api/v1/optimize/routes" \
   }'
 ```
 
-## 🧪 Testing
+##  Testing
 
 ```bash
 # Run all tests
@@ -179,7 +179,7 @@ pytest tests/unit/test_api.py
 pytest tests/integration/
 ```
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 ### Backend
 - **Python 3.11+**: Main application logic
@@ -211,7 +211,7 @@ pytest tests/integration/
 - **GitHub Actions**: CI/CD automation
 - **pytest**: Testing framework
 
-## 📊 Performance Benchmarks
+##  Performance Benchmarks
 
 | Operation | Dataset Size | Sequential | Parallel (4 cores) | Speedup |
 |-----------|-------------|-----------|-------------------|---------|
@@ -221,7 +221,7 @@ pytest tests/integration/
 | Full Route Optimization | 20 vehicles | 45s | 14s | 3.2x |
 | Telemetry Ingestion | 1,000 events/s | ✓ | ✓ | - |
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 Vehicle-Telemetry-Data-Platform/
@@ -268,14 +268,14 @@ Vehicle-Telemetry-Data-Platform/
 └── README.md
 ```
 
-## 🎓 Documentation
+##  Documentation
 
 - **[System Architecture](docs/SYSTEM_ARCHITECTURE.md)**: Detailed system design and component breakdown
 - **[Implementation Roadmap](docs/IMPLEMENTATION_ROADMAP.md)**: Week-by-week development guide
 - **[Graph Algorithms Guide](docs/GRAPH_ALGORITHMS_GUIDE.md)**: In-depth algorithm explanations
 - **[API Reference](http://localhost:8000/docs)**: Interactive API documentation
 
-## 🐳 Docker Deployment
+##  Docker Deployment
 
 ```bash
 # Build and run with Docker Compose
@@ -291,7 +291,7 @@ docker-compose logs -f
 docker-compose down
 ```
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
 
@@ -301,25 +301,25 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+##  License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 👤 Author
+##  Author
 
 **Ambar Shukla**
 
 - GitHub: [@AMBAR-SHUKLA](https://github.com/AMBAR-SHUKLA)
 - Project Link: [Vehicle-Telemetry-Data-Platform](https://github.com/AMBAR-SHUKLA/Vehicle-Telemetry-Data-Platform)
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - FastAPI framework and documentation
 - Introduction to Algorithms (CLRS)
 - OpenMP parallel computing community
 - Graph algorithm research papers and implementations
 
-## 📫 Contact
+##  Contact
 
 For questions or feedback, please open an issue on GitHub.
 
